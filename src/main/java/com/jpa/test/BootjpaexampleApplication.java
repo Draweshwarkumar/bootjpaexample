@@ -36,7 +36,7 @@ public class BootjpaexampleApplication {
 //	 User2.setName("Pankaj kumar");
 //	 User2.setCity("Chapra");
 //	 User2.setStatus("Randibaaj");
-//	 
+ //	 
 //	List<user> users =  List.of(User1,User2);
 //	Iterable<user> result =  userRepository.saveAll(users);
 //	 
@@ -64,12 +64,24 @@ public class BootjpaexampleApplication {
 //	 System.out.println("Deleted");
 	 
 //	 Deleting multiple user
+//	 
+//	 Iterable<user> allusers = userRepository.findAll();
+//	 allusers.forEach(user->{
+//		 System.out.println(user);
+//	 });
+//	 userRepository.deleteAll(allusers);
 	 
-	 Iterable<user> allusers = userRepository.findAll();
-	 allusers.forEach(user->{
-		 System.out.println(user);
+	 List<user> alluser = userRepository.getAlluser();
+	 alluser.forEach(e->{
+		 System.out.println(e);
 	 });
-	 userRepository.deleteAll(allusers);
+	 System.out.println("___________________________________");
+	 
+	 
+	 List<user> userByName = userRepository.getUserByName("Draweshwar kumar","patna");
+	 userByName.forEach(e->{
+		 System.out.println(e);
+	 });
 	 
 	 
 	}
