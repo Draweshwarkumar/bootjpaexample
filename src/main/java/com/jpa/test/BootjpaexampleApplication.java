@@ -83,6 +83,8 @@ public class BootjpaexampleApplication {
 		 System.out.println(e);
 	 });
 	 
+	 System.out.println("________________________________________");
+	 userRepository.getUsers().forEach(e->System.out.println(e));
 	 
 	}
 
